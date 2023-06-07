@@ -58,7 +58,7 @@ class SecondScreen extends StatelessWidget {
   ///   A ListView widget with separated items, each containing a title and a subtitle. When a title is
   /// tapped, a modal bottom sheet is displayed with the corresponding subtitle.
   listView() {
-    ListView.separated(
+    return ListView.separated(
       shrinkWrap: false,
       physics: const ScrollPhysics(),
       itemCount: chapter['titles'].length,
@@ -102,9 +102,7 @@ class SecondScreen extends StatelessWidget {
         );
       },
       padding: const EdgeInsets.all(8.0),
-      separatorBuilder: (BuildContext context, int index) {
-        return const Divider();
-      },
+      separatorBuilder: (context, index) => const Divider(),
     );
   }
 }

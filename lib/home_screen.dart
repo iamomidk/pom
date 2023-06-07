@@ -57,7 +57,7 @@ class _HomeState extends State<Home> {
 
   /// This function returns a container with a background image and a white color filter applied to it.
   background() {
-    Container(
+    return Container(
       alignment: Alignment.bottomLeft,
       width: 250,
       height: 250,
@@ -82,7 +82,7 @@ class _HomeState extends State<Home> {
   /// Divider between each item. The ListView also has a specified padding and scroll physics. The
   /// function does not explicitly return anything, but
   listView() {
-    ListView.separated(
+    return ListView.separated(
       shrinkWrap: false,
       physics: const ScrollPhysics(),
       itemCount: widget.data['titles'].length,
