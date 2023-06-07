@@ -44,5 +44,6 @@ jobs:
         env:
           LIARA_TOKEN: ${{ secrets.LIARA_API_TOKEN }}
         run: |
+          cd /pom_flutter/build/web
           npm i -g @liara/cli@3
           liara deploy --app="pom" --api-token="$LIARA_TOKEN" --detach
