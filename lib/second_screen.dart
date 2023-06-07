@@ -22,19 +22,19 @@ class SecondScreen extends StatelessWidget {
   /// `chapter['subTitles'][index]` are used.
   final dynamic chapter;
 
-  /// This function builds a scaffold with a background and a list view, wrapped in a safe area and a
-  /// right-to-left directionality.
+  /// This function builds a scaffold with a titled app bar and a safe area containing a list view with
+  /// right-to-left text direction.
   ///
   /// Args:
   ///   context (BuildContext): The BuildContext is a handle to the location of a widget in the widget
-  /// tree. It is used by the framework to locate and update the widget. It is passed as a parameter to
-  /// the build() method of a widget.
+  /// tree. It is used by the framework to locate and update the widget in the tree. It is passed as a
+  /// parameter to the build() method of a widget.
   ///
   /// Returns:
-  ///   A widget tree is being returned, starting with a `Directionality` widget, followed by a
-  /// `SafeArea` widget, which contains a `Scaffold` widget. The `Scaffold` widget has an `AppBar` and a
-  /// `Stack` as its children. The `Stack` has two children, a `background` widget and a `listView`
-  /// widget.
+  ///   A widget tree is being returned, starting with a `Directionality` widget that sets the text
+  /// direction to right-to-left, followed by a `SafeArea` widget that ensures the content is displayed
+  /// within the safe area of the device, and a `Scaffold` widget that provides a basic structure for
+  /// the screen, including an `AppBar` and a `body` that contains a `listView`.
   @override
   Widget build(BuildContext context) {
     return Directionality(
@@ -45,31 +45,7 @@ class SecondScreen extends StatelessWidget {
             elevation: 2,
             title: Text(title),
           ),
-          body: Stack(
-            alignment: Alignment.bottomLeft,
-            children: [
-              background(),
-              listView(),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-
-  /// This function returns a container with a background image and a white color filter applied to it.
-  background() {
-    Container(
-      alignment: Alignment.bottomLeft,
-      width: 250,
-      height: 250,
-      decoration: BoxDecoration(
-        image: DecorationImage(
-          image: const AssetImage('assets/png/shahed_logo.png'),
-          colorFilter: ColorFilter.mode(
-            Colors.white.withOpacity(0.4),
-            BlendMode.modulate,
-          ),
+          body: listView(),
         ),
       ),
     );
