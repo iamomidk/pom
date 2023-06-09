@@ -22,11 +22,11 @@ class Home extends StatefulWidget {
 }
 
 /// The `_HomeState` class builds a SafeArea Scaffold with an AppBar and a Stack containing a background
-/// and a listView aligned to the bottom left, and handles different actions based on the index
+/// and a listView aligned to the center, and handles different actions based on the index
 /// parameter passed to it.
 class _HomeState extends State<Home> {
   /// This function builds a SafeArea Scaffold with an AppBar and a Stack containing a background and a
-  /// listView aligned to the bottom left.
+  /// listView aligned to the center.
   ///
   /// Args:
   ///   context (BuildContext): The BuildContext is a handle to the location of a widget in the widget
@@ -45,7 +45,7 @@ class _HomeState extends State<Home> {
           title: const Text("فلسفه ی علم ریاضی"),
         ),
         body: Stack(
-          alignment: Alignment.bottomLeft,
+          alignment: Alignment.center,
           children: [
             background(),
             listView(),
@@ -58,7 +58,7 @@ class _HomeState extends State<Home> {
   /// This function returns a container with a background image and a white color filter applied to it.
   background() {
     return Container(
-      alignment: Alignment.bottomLeft,
+      alignment: Alignment.center,
       width: 250,
       height: 250,
       decoration: BoxDecoration(

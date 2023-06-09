@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.polygon.pom_flutter">
    <application
-        android:label="pom_flutter"
+        android:label="فلسفه علم ریاضی"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
